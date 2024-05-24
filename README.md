@@ -9,5 +9,5 @@ $ npm install @nesvet/missing-mui4-components
 Or
 
 ```sh
-$ yarn add @nesvet/missing-mui4-components
+$ bun add @nesvet/missing-mui4-components
 ```

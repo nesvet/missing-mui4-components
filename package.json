@@ -1,52 +1,52 @@
 {
-	"name": "@nesvet/missing-mui4-components",
-	"version": "1.0.135",
-	"description": "Missing MUI4 components",
-	"type": "module",
-	"exports": {
-		"./Collapse@next": "./lib/Collapse@next/index.js",
-		"./InputFile": "./lib/InputFile/index.jsx",
-		"./Dropzone": "./lib/Dropzone/index.jsx",
-		"./Dialog": "./lib/Dialog/index.jsx",
-		"./LoadingButton": "./lib/LoadingButton/index.js",
-		"./NumberDiff": "./lib/NumberDiff/index.jsx",
-		"./NumberInput": "./lib/NumberInput/index.jsx",
-		"./icons/CardView": "./lib/icons/CardView/index.jsx",
-		"./icons/Document": "./lib/icons/Document/index.jsx",
-		"./icons/Import": "./lib/icons/Import/index.jsx",
-		"./icons/Export": "./lib/icons/Export/index.jsx",
-		"./icons/FilterAlt": "./lib/icons/FilterAlt/index.jsx",
-		"./icons/Gantt": "./lib/icons/Gantt/index.jsx",
-		"./icons/Linux": "./lib/icons/Linux/index.jsx",
-		"./icons/Login": "./lib/icons/Login/index.jsx",
-		"./icons/Logout": "./lib/icons/Logout/index.jsx",
-		"./icons/NewWindow": "./lib/icons/NewWindow/index.jsx",
-		"./icons/Project": "./lib/icons/Project/index.jsx",
-		"./icons/TreeView": "./lib/icons/TreeView/index.jsx",
-		"./icons/Update": "./lib/icons/Update/index.jsx",
-		"./icons/Windows": "./lib/icons/Windows/index.jsx",
-		"./icons/Incoming": "./lib/icons/Incoming/index.jsx",
-		"./icons/Outgoing": "./lib/icons/Outgoing/index.jsx",
-		"./icons/Group": "./lib/icons/Group/index.jsx",
-		"./icons/Split": "./lib/icons/Split/index.jsx"
-	},
-	"packageManager": "yarn@1.22.22",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/nesvet/missing-mui4-components.git"
-	},
-	"keywords": [
-		"mui",
-		"mui4",
-		"components"
-	],
-	"author": "Eugene Nesvetaev <dev@nesvet.dev> (https://nesvet.dev/)",
-	"license": "MIT",
-	"devDependencies": {
-		"@nesvet/eslint-config": "^1",
-		"eslint-plugin-react": ">= 7"
-	}
+  "name": "@nesvet/missing-mui4-components",
+  "version": "1.0.135",
+  "description": "Missing MUI4 components",
+  "type": "module",
+  "exports": {
+    "./Collapse@next": "./lib/Collapse@next/index.js",
+    "./InputFile": "./lib/InputFile/index.jsx",
+    "./Dropzone": "./lib/Dropzone/index.jsx",
+    "./Dialog": "./lib/Dialog/index.jsx",
+    "./LoadingButton": "./lib/LoadingButton/index.js",
+    "./NumberDiff": "./lib/NumberDiff/index.jsx",
+    "./NumberInput": "./lib/NumberInput/index.jsx",
+    "./icons/CardView": "./lib/icons/CardView/index.jsx",
+    "./icons/Document": "./lib/icons/Document/index.jsx",
+    "./icons/Import": "./lib/icons/Import/index.jsx",
+    "./icons/Export": "./lib/icons/Export/index.jsx",
+    "./icons/FilterAlt": "./lib/icons/FilterAlt/index.jsx",
+    "./icons/Gantt": "./lib/icons/Gantt/index.jsx",
+    "./icons/Linux": "./lib/icons/Linux/index.jsx",
+    "./icons/Login": "./lib/icons/Login/index.jsx",
+    "./icons/Logout": "./lib/icons/Logout/index.jsx",
+    "./icons/NewWindow": "./lib/icons/NewWindow/index.jsx",
+    "./icons/Project": "./lib/icons/Project/index.jsx",
+    "./icons/TreeView": "./lib/icons/TreeView/index.jsx",
+    "./icons/Update": "./lib/icons/Update/index.jsx",
+    "./icons/Windows": "./lib/icons/Windows/index.jsx",
+    "./icons/Incoming": "./lib/icons/Incoming/index.jsx",
+    "./icons/Outgoing": "./lib/icons/Outgoing/index.jsx",
+    "./icons/Group": "./lib/icons/Group/index.jsx",
+    "./icons/Split": "./lib/icons/Split/index.jsx"
+  },
+  "packageManager": "bun@1.1.9",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nesvet/missing-mui4-components.git"
+  },
+  "keywords": [
+    "mui",
+    "mui4",
+    "components"
+  ],
+  "author": "Eugene Nesvetaev <dev@nesvet.dev> (https://nesvet.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@nesvet/eslint-config": "^1",
+    "eslint-plugin-react": ">= 7"
+  }
 }
