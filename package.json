@@ -46,7 +46,6 @@
   "author": "Eugene Nesvetaev <dev@nesvet.dev> (https://nesvet.dev/)",
   "license": "MIT",
   "devDependencies": {
-    "@nesvet/eslint-config": "^1",
-    "eslint-plugin-react": ">= 7"
+    "@nesvet/eslint-config": "^2.0.3"
   }
 }

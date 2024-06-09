@@ -1,8 +1,0 @@
-{
-	"extends": "@nesvet/eslint-config/x",
-	"env": {
-		"browser": true,
-		"node": true
-	},
-	"root": true
-}
