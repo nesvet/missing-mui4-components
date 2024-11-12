@@ -3,7 +3,7 @@ import { clsx } from "clsx";
 import Button from "@material-ui/core/esm/Button";
 import GetAppIcon from "@material-ui/icons/esm/GetApp";
 import { createStyles, theme } from "$styles";
-import InputFile from "../InputFile";
+import { InputFile } from "../InputFile";
 
 
 const borderWidth = theme.spacing(.5);
