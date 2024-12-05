@@ -33,7 +33,7 @@ export default class NumberDiff extends Component {
 		return (!number && !persist) ? null : (
 			<Component className={clsx(classes.root, invert ? (number < 0 ? classes.positive : number > 0 && classes.negative) : (number > 0 ? classes.positive : number < 0 && classes.negative), className)}>
 				{before}
-				{number && (number > 0 ? "+"+number : "−"+(-number))}
+				{number && (number > 0 ? `+${number}` : `−${-number}`)}
 				{after}
 			</Component>
 		);

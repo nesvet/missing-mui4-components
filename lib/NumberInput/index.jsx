@@ -1,12 +1,12 @@
 import { Component } from "react";
 import clsx from "clsx";
-import { createStyles } from "$styles";
-import TextField from "@material-ui/core/esm/TextField";
 import Button from "@material-ui/core/esm/Button";
 import ButtonGroup from "@material-ui/core/esm/ButtonGroup";
 import InputAdornment from "@material-ui/core/esm/InputAdornment";
-import KeyboardArrowUpIcon from "@material-ui/icons/esm/KeyboardArrowUp";
+import TextField from "@material-ui/core/esm/TextField";
 import KeyboardArrowDownIcon from "@material-ui/icons/esm/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@material-ui/icons/esm/KeyboardArrowUp";
+import { createStyles } from "$styles";
 
 
 const classes = createStyles(({ spacing, palette }) => ({
@@ -52,7 +52,7 @@ const classes = createStyles(({ spacing, palette }) => ({
 			
 			"& .MuiButton-root": {
 				height: spacing(3),
-				minWidth: spacing(4),
+				minWidth: spacing(4)
 			}
 		},
 		
@@ -67,7 +67,7 @@ const classes = createStyles(({ spacing, palette }) => ({
 				}
 			}
 		}
-	},
+	}
 	
 }), "NumberInput");
 
@@ -75,12 +75,12 @@ const classes = createStyles(({ spacing, palette }) => ({
 export default class NumberInput extends Component {
 	
 	state = {
-		value: parseFloat(this.props.value) || "",
+		value: Number.parseFloat(this.props.value) || "",
 		focused: false
 	};
 	
 	getNearestValidValue(index) {
-		return parseFloat(this.inputNode.validationMessage.match(/\d+((\.|,)\d+)?/g)[index].replace(/,/, "."));
+		return Number.parseFloat(this.inputNode.validationMessage.match(/\d+((\.|,)\d+)?/g)[index].replace(/,/, "."));
 	}
 	
 	handleDecrementClick = ({ ctrlKey, metaKey, shiftKey }) => {
@@ -128,7 +128,8 @@ export default class NumberInput extends Component {
 		
 		const { min, max, onChange } = this.props;
 		
-		if (!isNaN(valueAsNumber) && valueAsNumber == Math.max(Math.min(valueAsNumber, max), min)) onChange(valueAsNumber);
+		if (!isNaN(valueAsNumber) && valueAsNumber == Math.max(Math.min(valueAsNumber, max), min))
+			onChange(valueAsNumber);
 		
 		this.setState({ value });
 		
@@ -178,13 +179,13 @@ export default class NumberInput extends Component {
 		inputProps.max = max;
 		
 		const incrementButton = (
-			<Button onClick={this.handleIncrementClick} tabIndex="-1">
+			<Button tabIndex="-1" onClick={this.handleIncrementClick}>
 				<KeyboardArrowUpIcon />
 			</Button>
 		);
 		
 		const decrementButton = (
-			<Button onClick={this.handleDecrementClick} tabIndex="-1">
+			<Button tabIndex="-1" onClick={this.handleDecrementClick}>
 				<KeyboardArrowDownIcon />
 			</Button>
 		);
@@ -193,10 +194,6 @@ export default class NumberInput extends Component {
 			<TextField
 				className={clsx(classes.root, compact ? classes.compact : classes.normal, className)}
 				type="number"
-				onFocus={this.handleFocus}
-				onBlur={this.handleBlur}
-				onChange={this.handleChange}
-				onWheel={this.handleWheel}
 				InputProps={{
 					endAdornment: (inputEndAdornmentBefore || spinner !== false || inputEndAdornmentAfter) ? (
 						<InputAdornment position="end">
@@ -204,10 +201,10 @@ export default class NumberInput extends Component {
 							{spinner !== false && (
 								<ButtonGroup
 									className={classes.spinner}
-									variant="text"
 									color="inherit"
-									orientation={compact ? "vertical" : "horizontal"}
 									disableElevation
+									orientation={compact ? "vertical" : "horizontal"}
+									variant="text"
 									disabled={disabled}
 								>
 									{!compact && decrementButton}
@@ -221,8 +218,12 @@ export default class NumberInput extends Component {
 					...InputProps
 				}}
 				inputProps={inputProps}
+				onBlur={this.handleBlur}
+				onChange={this.handleChange}
+				onFocus={this.handleFocus}
+				onWheel={this.handleWheel}
 				disabled={disabled}
-				{ ...TextFieldProps }
+				{...TextFieldProps}
 				value={value}
 				inputRef={this.handleInputRef}
 			/>
@@ -234,7 +235,7 @@ export default class NumberInput extends Component {
 		step: 1,
 		min: -Infinity,
 		max: Infinity
-	}
+	};
 	
 	static classes = classes;
 	

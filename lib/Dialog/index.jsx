@@ -1,11 +1,11 @@
 import { Component } from "react";
 import clsx from "clsx";
-import MuiDialog from "@material-ui/core/esm/Dialog";
-import MuiDialogTitle from "@material-ui/core/esm/DialogTitle";
-import DialogContent from "@material-ui/core/esm/DialogContent";
-import DialogActions from "@material-ui/core/esm/DialogActions";
-import Typography from "@material-ui/core/esm/Typography";
 import Button from "@material-ui/core/esm/Button";
+import MuiDialog from "@material-ui/core/esm/Dialog";
+import DialogActions from "@material-ui/core/esm/DialogActions";
+import DialogContent from "@material-ui/core/esm/DialogContent";
+import MuiDialogTitle from "@material-ui/core/esm/DialogTitle";
+import Typography from "@material-ui/core/esm/Typography";
 import { createStyles, theme } from "$styles";
 
 
@@ -59,7 +59,7 @@ const classes = createStyles(({ spacing, palette, shape, alpha }) => ({
 	},
 	
 	content: {
-		"--gap": spacing(2)+"px",
+		"--gap": `${spacing(2)}px`,
 		display: "flex",
 		flexFlow: "column nowrap",
 		gap: "var(--gap)",
@@ -101,16 +101,16 @@ const dialogClasses = {
 export const DialogTitle = ({ className, ...restProps }) => (
 	<Typography
 		className={clsx(classes.title, className)}
-		variant="h3"
 		component={MuiDialogTitle}
 		disableTypography
-		{ ...restProps }
+		variant="h3"
+		{...restProps}
 	/>
 );
 
 
 export const DialogSubtitle = ({ className, ...restProps }) => (
-	<Typography className={clsx(classes.subtitle, className)} variant="h6" { ...restProps } />
+	<Typography className={clsx(classes.subtitle, className)} variant="h6" {...restProps} />
 );
 
 
@@ -177,7 +177,7 @@ export default class Dialog extends Component {
 							{this.getSubtitle ? this.getSubtitle() : this.subtitle}
 						</DialogSubtitle>
 					)}
-					
+				
 				</DialogTitle>
 			);
 			
@@ -186,20 +186,22 @@ export default class Dialog extends Component {
 			this.renderedCloseButton =
 				this.closeButton === false ?
 					null :
-				this.renderCloseButton ?
-					this.renderCloseButton() :
-				(
-					<Button onClick={this.close} tabIndex={this.closeButtonTabIndex}>
-						{this.closeButtonLabel}
-					</Button>
-				);
+					this.renderCloseButton ?
+						this.renderCloseButton() :
+						(
+							<Button tabIndex={this.closeButtonTabIndex} onClick={this.close}>
+								{this.closeButtonLabel}
+							</Button>
+						);
 			
 			this.renderedActions = (this.renderedCloseButton || this.renderActions) ? (
 				<DialogActions className={clsx(classes.actions, this.classes.actions)}>
-					{this.renderedCloseButton ? (<>
-						{this.renderedCloseButton}
-						<div className={classes.actionsSpace} />
-					</>) : null}
+					{this.renderedCloseButton ? (
+						<>
+							{this.renderedCloseButton}
+							<div className={classes.actionsSpace} />
+						</>
+					) : null}
 					{this.renderActions?.()}
 				</DialogActions>
 			) : null;
@@ -210,13 +212,13 @@ export default class Dialog extends Component {
 			<MuiDialog
 				className={clsx(this.className, this.isRelative && classes.relative)}
 				classes={dialogClasses}
-				open={isOpened}
-				onClose={this.close}
-				fullWidth={this.fullWidth}
-				maxWidth={this.maxWidth}
-				keepMounted
 				disablePortal={this.isRelative ?? false}
+				fullWidth={this.fullWidth}
+				keepMounted
+				maxWidth={this.maxWidth}
+				open={isOpened}
 				transitionDuration={this.transitionDuration}
+				onClose={this.close}
 			>
 				<div className={classes.overflow}>
 					
@@ -227,7 +229,7 @@ export default class Dialog extends Component {
 					</DialogContent>
 					
 					{this.renderedActions}
-					
+				
 				</div>
 			</MuiDialog>
 		);
