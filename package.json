@@ -1,6 +1,6 @@
 {
   "name": "@nesvet/missing-mui4-components",
-  "version": "1.0.135",
+  "version": "1.0.136",
   "description": "Missing MUI4 components",
   "type": "module",
   "exports": {
