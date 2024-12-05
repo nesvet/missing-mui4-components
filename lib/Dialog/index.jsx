@@ -114,7 +114,7 @@ export const DialogSubtitle = ({ className, ...restProps }) => (
 );
 
 
-export default class Dialog extends Component {
+export class Dialog extends Component {
 	constructor(props, initialState) {
 		super(props);
 		
@@ -241,3 +241,5 @@ export default class Dialog extends Component {
 	static Subtitle = DialogSubtitle;
 	
 }
+
+export default Dialog;

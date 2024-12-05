@@ -72,7 +72,7 @@ const classes = createStyles(({ spacing, palette }) => ({
 }), "NumberInput");
 
 
-export default class NumberInput extends Component {
+export class NumberInput extends Component {
 	
 	state = {
 		value: Number.parseFloat(this.props.value) || "",
@@ -240,3 +240,5 @@ export default class NumberInput extends Component {
 	static classes = classes;
 	
 }
+
+export default NumberInput;

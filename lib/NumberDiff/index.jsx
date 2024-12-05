@@ -20,7 +20,7 @@ const classes = createStyles(({ palette }) => ({
 }), "NumberDiff");
 
 
-export default class NumberDiff extends Component {
+export class NumberDiff extends Component {
 	
 	shouldComponentUpdate({ number }) {
 		return this.props.number != number;
@@ -40,3 +40,5 @@ export default class NumberDiff extends Component {
 	}
 	
 }
+
+export default NumberDiff;
