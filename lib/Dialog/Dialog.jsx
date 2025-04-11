@@ -127,7 +127,7 @@ export class Dialog extends Component {
 		
 	}
 	
-	closeButtonLabel = "Закрыть";
+	closeButtonLabel = this.props.closeButtonLabel;
 	
 	classes = {};
 	
@@ -235,6 +235,10 @@ export class Dialog extends Component {
 		);
 	}
 	
+	
+	static defaultProps = {
+		closeButtonLabel: "Close"
+	};
 	
 	static Title = DialogTitle;
 	
