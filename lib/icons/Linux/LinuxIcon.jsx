@@ -1,4 +1,4 @@
-import SvgIcon from "@material-ui/core/esm/SvgIcon";
+import { SvgIcon } from "@material-ui/core/esm";
 
 
 export const LinuxIcon = props => (

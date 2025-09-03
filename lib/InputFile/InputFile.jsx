@@ -22,7 +22,14 @@ class InputFileComponent extends Component {
 	
 	render() {
 		
-		const { className, types, extensions, innerRef, onChange, ...restProps } = this.props;
+		const {
+			className,
+			types,
+			extensions,
+			innerRef,
+			onChange, // eslint-disable-line no-unused-vars
+			...restProps
+		} = this.props;
 		
 		const acceptMemo = (types?.join("") ?? "") + (extensions?.join("") ?? "");
 		if (this.#acceptMemo !== acceptMemo) {

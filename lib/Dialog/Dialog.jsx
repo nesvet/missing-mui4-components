@@ -1,11 +1,13 @@
 import { Component } from "react";
-import clsx from "clsx";
-import Button from "@material-ui/core/esm/Button";
-import MuiDialog from "@material-ui/core/esm/Dialog";
-import DialogActions from "@material-ui/core/esm/DialogActions";
-import DialogContent from "@material-ui/core/esm/DialogContent";
-import MuiDialogTitle from "@material-ui/core/esm/DialogTitle";
-import Typography from "@material-ui/core/esm/Typography";
+import { clsx } from "clsx";
+import {
+	Button,
+	Dialog as MuiDialog,
+	DialogActions,
+	DialogContent,
+	DialogTitle as MuiDialogTitle,
+	Typography
+} from "@material-ui/core/esm/";
 import { createStyles, theme } from "$styles";
 
 

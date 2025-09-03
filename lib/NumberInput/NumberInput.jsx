@@ -1,11 +1,15 @@
 import { Component } from "react";
-import clsx from "clsx";
-import Button from "@material-ui/core/esm/Button";
-import ButtonGroup from "@material-ui/core/esm/ButtonGroup";
-import InputAdornment from "@material-ui/core/esm/InputAdornment";
-import TextField from "@material-ui/core/esm/TextField";
-import KeyboardArrowDownIcon from "@material-ui/icons/esm/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@material-ui/icons/esm/KeyboardArrowUp";
+import { clsx } from "clsx";
+import {
+	Button,
+	ButtonGroup,
+	InputAdornment,
+	TextField
+} from "@material-ui/core/esm";
+import {
+	KeyboardArrowDown as KeyboardArrowDownIcon,
+	KeyboardArrowUp as KeyboardArrowUpIcon
+} from "@material-ui/icons/esm";
 import { createStyles } from "$styles";
 
 
@@ -85,7 +89,8 @@ export class NumberInput extends Component {
 		const { value, valueAsNumber } = this.inputNode;
 		
 		if (value !== this.state.value) {
-			(this.props.onChange || this.props.onInput)(valueAsNumber);
+			this.props.onChange?.(valueAsNumber);
+			this.props.onInput?.(valueAsNumber);
 			
 			this.setState({ value });
 		}
@@ -98,7 +103,8 @@ export class NumberInput extends Component {
 		const { value, valueAsNumber } = this.inputNode;
 		
 		if (value !== this.state.value) {
-			(this.props.onChange || this.props.onInput)(valueAsNumber);
+			this.props.onChange?.(valueAsNumber);
+			this.props.onInput?.(valueAsNumber);
 			
 			this.setState({ value });
 		}
@@ -107,9 +113,10 @@ export class NumberInput extends Component {
 	
 	#handleFocus = event => {
 		event.target.select();
+		
 		this.props.onFocus?.(event);
 		
-		this.setState({ focused: true });
+		this.state.focused = true;
 		
 	};
 	
@@ -124,8 +131,10 @@ export class NumberInput extends Component {
 		
 		const { min, max, onChange, onInput } = this.props;
 		
-		if (!Number.isNaN(valueAsNumber) && valueAsNumber === Math.max(Math.min(valueAsNumber, max), min))
-			(onChange || onInput)(valueAsNumber);
+		if (!Number.isNaN(valueAsNumber) && valueAsNumber === Math.max(Math.min(valueAsNumber, max), min)) {
+			onChange?.(valueAsNumber);
+			onInput?.(valueAsNumber);
+		}
 		
 		this.setState({ value });
 		
@@ -136,12 +145,14 @@ export class NumberInput extends Component {
 		if (event.target === document.activeElement) {
 			event.target.blur();
 			event.stopPropagation();
+			
 			setTimeout(() => event.target.focus(), 0);
 		}
 		
 	};
 	
-	#handleInputRef = inputNode => (this.inputNode = inputNode);
+	inputNode;
+	#handleInputRef = inputNode => { this.inputNode = inputNode; };
 	
 	
 	static getDerivedStateFromProps({ value }, { focused }) {
@@ -153,9 +164,9 @@ export class NumberInput extends Component {
 		
 		const {
 			className,
-			onFocus,
-			onBlur,
-			onChange,
+			onFocus, // eslint-disable-line no-unused-vars
+			onBlur, // eslint-disable-line no-unused-vars
+			onChange, // eslint-disable-line no-unused-vars
 			spinner,
 			compact,
 			inputEndAdornmentBefore,

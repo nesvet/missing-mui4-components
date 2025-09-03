@@ -1,5 +1,5 @@
 import { Component } from "react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { createStyles } from "$styles";
 
 

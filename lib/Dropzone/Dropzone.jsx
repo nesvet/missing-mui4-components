@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { clsx } from "clsx";
-import Button from "@material-ui/core/esm/Button";
-import GetAppIcon from "@material-ui/icons/esm/GetApp";
+import { Button } from "@material-ui/core/esm";
+import { GetApp as GetAppIcon } from "@material-ui/icons/esm";
 import { createStyles, theme } from "$styles";
 import { InputFile } from "../InputFile";
 

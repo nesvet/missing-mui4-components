@@ -1,28 +1,28 @@
 {
-  "name": "@nesvet/missing-mui4-components",
-  "version": "2.1.1",
-  "description": "Missing MUI4 components",
-  "type": "module",
-  "exports": {
-    ".": "./lib/index.js",
-    "./*": "./lib/*/index.js"
-  },
-  "packageManager": "bun@1.2.9",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nesvet/missing-mui4-components.git"
-  },
-  "keywords": [
-    "mui",
-    "mui4",
-    "components"
-  ],
-  "author": "Eugene Nesvetaev <dev@nesvet.dev> (https://nesvet.dev/)",
-  "license": "MIT",
-  "devDependencies": {
-    "@nesvet/eslint-config": "^2.0.52"
-  }
+	"name": "@nesvet/missing-mui4-components",
+	"version": "2.1.1",
+	"description": "Missing MUI4 components",
+	"type": "module",
+	"exports": {
+		".": "./lib/index.js",
+		"./*": "./lib/*/index.js"
+	},
+	"packageManager": "bun@1.2.9",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nesvet/missing-mui4-components.git"
+	},
+	"keywords": [
+		"mui",
+		"mui4",
+		"components"
+	],
+	"author": "Eugene Nesvetaev <dev@nesvet.dev> (https://nesvet.dev/)",
+	"license": "MIT",
+	"devDependencies": {
+		"@nesvet/eslint-config": "^2.0.52"
+	}
 }
