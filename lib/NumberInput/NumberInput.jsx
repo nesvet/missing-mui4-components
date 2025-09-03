@@ -201,7 +201,6 @@ export class NumberInput extends Component {
 			<TextField
 				className={clsx(classes.root, compact ? classes.compact : classes.normal, className)}
 				type="number"
-				value={value}
 				InputProps={{
 					endAdornment: (inputEndAdornmentBefore || spinner !== false || inputEndAdornmentAfter) ? (
 						<InputAdornment position="end">
@@ -233,6 +232,7 @@ export class NumberInput extends Component {
 				disabled={disabled}
 				inputRef={this.#handleInputRef}
 				{...TextFieldProps}
+				value={value}
 			/>
 		);
 	}
