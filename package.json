@@ -7,7 +7,7 @@
 		".": "./lib/index.js",
 		"./*": "./lib/*/index.js"
 	},
-	"packageManager": "bun@1.2.9",
+	"packageManager": "bun@1.2.21",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -23,6 +23,6 @@
 	"author": "Eugene Nesvetaev <dev@nesvet.dev> (https://nesvet.dev/)",
 	"license": "MIT",
 	"devDependencies": {
-		"@nesvet/eslint-config": "^2.0.52"
+		"@nesvet/eslint-config": "^2.1.2"
 	}
 }
